@@ -48,6 +48,7 @@ export default {
     font-size: 14px;
     background-color: #ffffff;
     width: 100%;
+    z-index: 5;
 
     position: sticky;
     top: 44px;

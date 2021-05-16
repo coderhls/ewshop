@@ -1,10 +1,19 @@
 <template>
-$END$
+  <nav-bar>
+    <template v-slot:left>
+    </template>
+    <template v-slot:default>分类</template>
+  </nav-bar>
+  <h1>分类</h1>
 </template>
 
 <script>
+import NavBar from 'components/common/navbar/NavBar.vue';
 export default {
-name: "Category"
+  name: "Category",
+  components: {
+    NavBar
+  }
 }
 </script>
 

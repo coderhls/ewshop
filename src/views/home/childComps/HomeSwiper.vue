@@ -1,10 +1,25 @@
 <template>
-$END$
+  <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+    <van-swipe-item v-for="(item, index) in banners" :key="index">
+      <img v-lazy="item.img_url" alt="">
+    </van-swipe-item>
+    <van-swipe-item>2</van-swipe-item>
+    <van-swipe-item>3</van-swipe-item>
+    <van-swipe-item>4</van-swipe-item>
+  </van-swipe>
 </template>
 
 <script>
 export default {
-name: "HomeSwiper"
+  name: "HomeSwiper",
+  props: {
+    banners: {
+      type: Array,
+      default() {
+        return [];
+      }
+    }
+  }
 }
 </script>
 
